@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">ChatApp!</a>
+  <button
+    class="navbar-toggler d-lg-none"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapsibleNavId"
+    aria-controls="collapsibleNavId"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  ></button>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item active ">
+        <a class="nav-link btn btn-outline-light" href="#"
+          >Se connecter <span class="sr-only">(current)</span></a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row h-100">
+    <div class="col m-auto">
+      <div class="jumbotron bg-white mt-5 rounded round-dash">
+        <div class="row">
+          <div class="col">
+            <h1 class="pb-4 wow bounceInUp">ChatApp!</h1>
+            <p class="mt-3">
+              La superbe application de Chat, <br />vous permettant de chatter
+              avec vos proches, amis, et autres, de manière très sympas, très
+              simplement !
+            </p>
+            <p class="lead">
+              <a
+                class="btn btn-primary btn-lg btn-outline-light wow"
+                href="Jumbo action link"
+                role="button"
+                >Découvrir</a
+              >
+            </p>
+          </div>
+          <div class="col">
+            <img
+              src="http://localhost:8000/static/chatapp_icon_presentation.jpeg"
+              class="wow pulse img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+              data-wow-iteration="infinite"
+              data-wow-duration="infinite"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
