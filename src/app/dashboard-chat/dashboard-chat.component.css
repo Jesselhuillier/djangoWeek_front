@@ -1,0 +1,55 @@
+body {
+}
+
+#content_page {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "list_user_connected chat_message_history chat_message_history chat_message_history"
+    "list_user_connected chat_message_input chat_message_input chat_submit_input";
+  grid-template-columns: 1fr 3fr 3fr 50px;
+  grid-template-rows: 50px 1fr 50px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.list_user_connected {
+  grid-area: list_user_connected;
+  background-color: yellow;
+}
+
+.chat_message_history {
+  grid-area: chat_message_history;
+}
+
+.chat_message_input {
+  grid-area: chat_message_input;
+}
+
+.chat_message_input input {
+  height: 100%;
+}
+
+/* custom personnalization */
+
+nav {
+  background-color: #15899b !important;
+}
+
+.chat_message_right {
+  width: 100%;
+  text-align: right;
+}
+
+.chat_message_right p {
+  background-color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+}
+
+.chat_message_left {
+  text-align: left;
+}

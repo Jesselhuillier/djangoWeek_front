@@ -1,0 +1,124 @@
+<div id="content_page">
+  <div class="header">
+    <nav class="navbar navbar-expand-sm navbar-light">
+      <a class="navbar-brand" href="#">ChatApp!</a>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+          <input
+            class="form-control mr-sm-2"
+            type="text"
+            placeholder="Search .."
+          />
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+        <ul class="navbar-nav mt-2 mt-lg-0">
+          <!--<li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Account</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Action 1</a>
+              <a class="dropdown-item" href="#">Disconnect</a>
+            </div>
+          </li>-->
+        </ul>
+        <button class="btn">Disconnect</button>
+      </div>
+    </nav>
+  </div>
+
+  <div class="list_user_connected bg-info">
+    <br />
+    <h4><small>&nbsp;Connected users :</small></h4>
+    <div class="list-group">
+      <br />
+      <a
+        class="bg-transparent list-group-item list-group-item-action"
+        style="border: none; background-image: linear-gradient(to right, #15899b, #17a2b8, #17a2b8);"
+        *ngFor="let user of Users"
+      >
+        {{ user.pseudo }}
+      </a>
+    </div>
+    <br />
+    <h4><small>&nbsp;List channels :</small></h4>
+    <div class="list-group">
+      <a
+        href="#"
+        class="bg-transparent list-group-item list-group-item-action"
+        style="border: none; background-image: linear-gradient(to right, #15899b, #17a2b8, #17a2b8);"
+        *ngFor="let channel of allChannels"
+        >{{ channel.idChannel }}</a
+      >
+    </div>
+  </div>
+
+  <div class="chat_message_history d-flex">
+    <div class="container m-2 align-content-start">
+      <div class="row">
+        <div class="chat_message_left">
+          <span class="badge badge-primary bg-white text-primary rounded"
+            >BOT.</span
+          ><br />
+          <p class="bg-info p-1 px-3 rounded">
+            Bonjour, je suis le Bot. de cette conversation!<br />
+            Que puis-je pour vous ?
+          </p>
+        </div>
+
+        <div class="chat_message_right" *ngFor="let message of messages">
+          <span class="badge badge-primary bg-white text-primary rounded">{{
+            message.idUser
+          }}</span>
+          <br />
+          <p class="float-right ">
+            {{ message.comment }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat_message_input">
+    <input
+      [ngModel]="message_user"
+      type="text"
+      class="form-control"
+      name=""
+      id=""
+      aria-describedby="helpId"
+      placeholder=""
+    />
+  </div>
+
+  <button class="chat_submit_input" (click)="sendMessage()">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+  </button>
+</div>
