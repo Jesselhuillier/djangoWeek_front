@@ -6,10 +6,11 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { DashboardChatComponent } from "./dashboard-chat/dashboard-chat.component";
 import { HomeComponent } from './home/home.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [AppComponent, DashboardChatComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule,FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
